@@ -1,0 +1,29 @@
+
+<h1>Edit {{whisky.name}}</h1>
+<form method="POST" action="/companies/{{id}}?_method=PATCH">
+  <div>
+    <label for="name">Name of Whisky</label>
+    <input type="text" name="name" value="{{whisky.name}}">
+  </div>
+  <div>
+    <label for="yearsAged">Years Aged</label>
+    <input type="text" name="location" value="{{whisky.yearsAged}}">
+  </div>
+  <div>
+    <label for="originCountry">Country of Origin</label>
+    <input type="text" name="originCountry" value="{{whisky.originCountry}}">
+  </div>
+  <div>
+    <label for="distillery">Distillery</label>
+    <input type="text" name="distillery" value="{{whisky.distillery}}">
+  </div>
+  <div>
+    <label for="yearMade">Distillery Found</label>
+    <input type="text" name="yearMade" value="{{whisky.yearMade}}">
+  </div>
+  
+  <button type="submit">Edit Whisky</button>
+</form>
+
+<a href="../country/{{id}}">Back to {{country.country}}</a>
+
