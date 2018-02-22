@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const User = require('../models/country')
+const User = require('../models/user')
 
 
 
@@ -10,7 +10,7 @@ const User = require('../models/country')
 router.get('/', (req, res) => {
 
     User.find().then((users) => {
-        res.render('user/index', {
+        res.render('users/index', {
             users: users
         })
     })
@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
 
     User.findById(req.params.id).then((user) => {
-        res.render('user/show', {
+        res.render('users/show', {
             user: user
         })
     })
@@ -33,7 +33,7 @@ router.get('/:id/edit', (req, res) => {
 
     User.findById(req.params.id).then((user) => {
 
-        res.render('user/edit', {
+        res.render('users/edit', {
             id: req.params.id,
             user:user
         })
@@ -48,7 +48,7 @@ router.patch('/:id', (req, res) => {
       country: req.body.country,
       favoriteWhisky: req.body.favoriteWhisky,
     }, {new: true}).then((updatedUser) => {
-        res.redirect(`/user/${updatedUser._id}`)
+        res.redirect(`/users/${updatedUser._id}`)
     })
 })
 

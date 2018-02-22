@@ -1,0 +1,13 @@
+<main>
+
+<h1>Whisky Lovers</h1>
+<ul>{{#each users}}
+    <div>
+        <a href="/users/{{_id}}">
+        <img src="{{img}}" alt="{{name}}">
+        <li>{{name}}</li>
+        </a>
+    </div>
+    {{/each}}
+</ul>
+</main>

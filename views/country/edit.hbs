@@ -4,11 +4,11 @@
 <h1>Edit {{country.country}}</h1>
 <form method="POST" action="/country/{{id}}?_method=PATCH">
   <div>
-    <label for="name">Style of Whisky</label>
+    <label for="primaryWhiskyStyle">Style of Whisky</label>
     <input type="text" name="primaryWhiskyStyle" value="{{country.primaryWhiskyStyle}}">
   </div>
   <div>
-    <label for="location">Top Seller</label>
+    <label for="topSellingWhisky">Top Seller</label>
     <input type="text" name="topSellingWhisky" value="{{country.topSellingWhisky}}">
   </div>
   
