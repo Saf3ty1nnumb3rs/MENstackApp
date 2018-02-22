@@ -10,6 +10,4 @@ const countrySchema = new Schema({
     whiskyProduced: [whiskySchema]
 })
 
-
-
 module.exports = countrySchema
