@@ -1,0 +1,21 @@
+
+<div class="container"></div>
+    <div>
+        <img src="{{country.img}}" alt="{{country.country}}">
+    </div>
+    <h1>{{country.country}}</h1>
+
+    <h3>{{country.primaryWhiskyStyle}}</h3>
+    <a href="/country/{{country.id}}/edit">Edit Me</a>
+    <ul>
+        {{#each country.whiskyProduced}}
+        <a href="country/{{country._id}}/{{_id}}">
+                <img src="{{img}}" alt="{{name}}">
+                
+                <li>{{name}}</li>
+
+        </a>
+        {{/each}}
+    </ul>
+    {{!-- <a href="{{country._id}}/new">New Whiskey</a> --}}
+</div>
