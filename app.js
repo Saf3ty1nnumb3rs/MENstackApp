@@ -9,7 +9,9 @@ const mongoose = require('mongoose')
 const methodOverride = require('method-override')
 
 const index = require('./controllers/index')
-const users = require('./controllers/users')
+const usersController = require('./controllers/usersController')
+const whiskyController = require('./controllers/whiskyController')
+const countryController = require('./controllers/countryController')
 
 const app = express()
 
@@ -32,13 +34,16 @@ app.set('view engine', 'hbs')
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 app.use(logger('dev'))
 app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(methodOverride('_method'))
 
 app.use('/', index)
-app.use('/users', users)
+app.use('/users', usersController)
+app.use('/whisky', whiskyController)
+app.use('/country', countryController)
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
