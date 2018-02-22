@@ -112,6 +112,8 @@ const asia = new Country({
     topSellingWhisky: "Officer's Choice Rare",
     whiskyProduced: [kavalan]
 })
+
+
 const bender = new User({
     name: 'Bender',
     img: 'https://memegenerator.net/img/instances/26693568/were-going-to-start-our-own-homebrew-club-with-whiskey-and-hookers.jpg',                
@@ -124,6 +126,7 @@ const domokun = new User({
     country: 'Japan',
     favoriteWhisky: 'Whisky that is liquid',
 })
+
 Whisky.remove().then(() => {
     return Country.remove()
 }).then(() => {
@@ -131,7 +134,7 @@ Whisky.remove().then(() => {
 }).then(() => {
     return Country.insertMany([asia, ireland, usa, scotland, japan])
 }).then(() => {
-    return User.insertMany([])
+    return User.insertMany([bender, domokun])
 }).then(() => {
     console.log('Saved successfully')
     db.close()
