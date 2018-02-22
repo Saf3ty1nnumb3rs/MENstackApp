@@ -34,8 +34,8 @@ router.get('/:id', (req, res) => {
 router.get('/:id/edit', (req, res) => {
 
     
-    Country.findById(req.params.companyId).then((country) => {
-        const whisky = country.whisky.id(req.params.id)
+    Country.findById(req.params.countryId).then((country) => {
+        const whisky = country.whiskyProduced.id(req.params.id)
         res.render('whisky/edit', {
             countryId: req.params.countryId,
             whisky: whisky
@@ -47,20 +47,22 @@ router.get('/:id/edit', (req, res) => {
   // UPDATE
   // PUT/PATCH
   router.patch('/:id', (req, res) => {
-    Company.findById(req.params.companyId).then((company) => {
-  
+    Country.findById(req.params.countryId).then((country) => {
       // We don't have a nice method like findByIdAndUpdate here
       // so instead we need to manually change the sodas values
-      const soda = company.sodas.id(req.params.id)
-      soda.name = req.body.name
-      soda.price = req.body.price
-      soda.packaging = req.body.packaging
-      soda.quantitySold = req.body.quantitySold
+      const whisky = country.whisky.id(req.params.id)
+      whisky.name = req.body.name
+      whisky.img = req.body.img
+      whisky.distillery = req.body.distillery
+      whisky.yearMade = req.body.yearMade
+      whisky.style = req.body.style
+      whisky.yearsAged = req.body.yearsAged
+      whisky.originCountry = req.body.originCountry
   
       // Then Save the company
-      return company.save()
-    }).then((updatedCompany) => {
-      res.redirect(`/companies/${updatedCompany._id}/sodas/${req.params.id}`)
+      return country.save()
+    }).then((updatedCountry) => {
+      res.redirect(`/country/${updatedCountry._id}/whisky/${req.params.id}`)
     })
   })
   
