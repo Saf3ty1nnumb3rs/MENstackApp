@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const path = require('path')
 const favicon = require('serve-favicon')
@@ -11,6 +12,8 @@ const users = require('./controllers/users')
 
 const app = express()
 
+
+mongoose.connect(process.env.MONGODB_URI)
 // view engine setup
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'hbs')
