@@ -3,11 +3,17 @@
     <div>
         <img src="{{country.img}}" alt="{{country.country}}">
     </div>
-    <h1>{{country.country}}</h1>
+    <div>
+        <h1>{{country.country}}</h1>
 
-    <h3>{{country.primaryWhiskyStyle}}</h3>
-    <h4>Top Selling Whiskey: {{country.topSellingWhisky}}</h4>
-    <a href="/country/{{country.id}}/edit">Edit Me</a>
+        <h3>{{country.primaryWhiskyStyle}}</h3>
+    </div>
+    
+        <h4>Top Selling Whiskey: {{country.topSellingWhisky}}</h4>
+    <div>
+        <a href="/country/{{country.id}}/edit">Edit Me</a>
+        <a href="/country/">Back to Countries</a>
+    </div>
     <ul>
         {{#each country.whiskyProduced}}
         <a href="country/{{country._id}}/{{_id}}">

@@ -1,5 +1,10 @@
 <h1>Whisky Producing Countries</h1>
 <ul>{{#each countries}}
-    <li><a href="/country/{{_id}}">{{country}}</a></li>
+    <div>
+        <a href="/country/{{_id}}">
+            <img src="{{img}}" alt="{{country}}">
+            <li>{{country}}</li>
+        </a>
+    </div>
     {{/each}}
 </ul>
