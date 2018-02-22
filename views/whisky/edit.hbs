@@ -5,14 +5,18 @@
     <img src="{{whisky.img}}" alt="{{whisky.name}}">
 </div>
 <h1>Edit {{whisky.name}}</h1>
-<form method="POST" action="/companies/{{id}}?_method=PATCH">
+<form method="POST" action=".?_method=PATCH">
   <div>
     <label for="name">Name of Whisky</label>
     <input type="text" name="name" value="{{whisky.name}}">
   </div>
   <div>
+    <label for="img">Image URL</label>
+    <input type="text" name="img" value="{{whisky.img}}">
+  </div>
+  <div>
     <label for="yearsAged">Years Aged</label>
-    <input type="text" name="location" value="{{whisky.yearsAged}}">
+    <input type="text" name="yearsAged" value="{{whisky.yearsAged}}">
   </div>
   <div>
     <label for="originCountry">Country of Origin</label>
