@@ -6,6 +6,7 @@ const logger = require('morgan')
 const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
+const methodOverride = require('_method')
 
 const index = require('./controllers/index')
 const users = require('./controllers/users')
@@ -14,6 +15,15 @@ const app = express()
 
 
 mongoose.connect(process.env.MONGODB_URI)
+
+const db = mongoose.connection
+
+db.on('open', () => {
+  console.log('Successfully connected to mongoDB')
+})
+db.on('error', (err) => {
+  console.log(err)
+})
 // view engine setup
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'hbs')
