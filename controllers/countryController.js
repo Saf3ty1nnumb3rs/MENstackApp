@@ -40,4 +40,14 @@ router.get('/:id/edit', (req, res) => {
     })
 })
 
+//COUNTRY PATCH--------------------------GET//
+router.patch('/:id', (req, res) => {
+    Country.findByIdAndUpdate(req.params.id, {
+        primaryWhiskyStyle: req.body.primaryWhiskyStyle,
+        topSellingWhisky: req.body.topSellingWhisky,
+    }, {new: true}).then((updatedCountry) => {
+        res.redirect(`/country/${updatedCountry._id}`)
+    })
+})
+
 module.exports = router
