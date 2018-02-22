@@ -3,6 +3,7 @@ const Schema = mongoose.Schema
 
 const whiskySchema = new Schema({
     name: String,
+    img: String,
     distillery: String,
     yearMade: Number,
     style: String,
