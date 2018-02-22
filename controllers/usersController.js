@@ -17,6 +17,12 @@ router.get('/', (req, res) => {
 
 })
 
+//USER NEW-------------------------GET//
+router.get('/new', (req, res) => {
+  res.render('users/new')
+})
+
+
 //USER SHOW-------------------------GET//
 router.get('/:id', (req, res) => {
 
@@ -27,6 +33,21 @@ router.get('/:id', (req, res) => {
     })
 
 })
+//USER------------------------------CREATE/POST//
+router.post('/', (req, res) => {
+  const newUser = new User({
+    name: req.body.name,
+    img: req.body.img,
+    country: req.body.country,
+    favoriteWhisky: req.body.favoriteWhisky
+  })
+
+  newUser.save().then((savedUser) => {
+    res.redirect('/users')
+  })
+})
+
+
 
 //USER EDIT---------------------------GET//
 router.get('/:id/edit', (req, res) => {
@@ -40,7 +61,7 @@ router.get('/:id/edit', (req, res) => {
     })
 })
 
-//USER PATCH--------------------------GET//
+//USER PATCH--------------------------PUT/UPDATE//
 router.patch('/:id', (req, res) => {
     User.findByIdAndUpdate(req.params.id, {
       name: req.body.name,
@@ -51,5 +72,14 @@ router.patch('/:id', (req, res) => {
         res.redirect(`/users/${updatedUser._id}`)
     })
 })
+
+//USER DELETE--------------------------DESTROY//
+
+router.delete('/:id', (req, res) => {
+  User.findByIdAndRemove(req.params.id).then(() => {
+    res.redirect('/users')
+  })
+})
+
 
 module.exports = router
