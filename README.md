@@ -12,6 +12,15 @@ https://github.com/Saf3ty1nnumb3rs/MENstackApp/blob/master/project_items/ERD.JPG
 
 https://github.com/Saf3ty1nnumb3rs/MENstackApp/blob/master/project_items/wireframe_project2.JPG
 
+### Trello Workflow
+
+https://trello.com/b/8XBgNv6q/wdi-project-2-data-connection
+
+###gitHub
+
+https://github.com/Saf3ty1nnumb3rs/MENstackApp
+
+
 
 ## Technologies Used for the Development of This App
 
