@@ -11,12 +11,11 @@
     
         <h4>Top Selling Whiskey: {{country.topSellingWhisky}}</h4>
     <div>
-        <a href="/country/{{country.id}}/edit">Edit Me</a>
-        <a href="/country/">Back to Countries</a>
+        <a href="/country">Back to Countries</a>
     </div>
     <ul>
         {{#each country.whiskyProduced}}
-        <a href="country/{{country._id}}/{{_id}}">
+        <a href="/country/{{../country.id}}/whisky/{{this._id}}">
                 <img src="{{img}}" alt="{{name}}">
                 
                 <li>{{name}}</li>

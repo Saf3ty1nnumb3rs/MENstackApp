@@ -1,12 +1,12 @@
 const express = require('express')
-const router = express.Router()
+const router = express.Router({ mergeParams: true })
 const User = require('../models/user')
 
 
 
 
 
-//USER INDEX------------------------GET//
+//USER INDEX------------------------GET//`
 router.get('/', (req, res) => {
 
     User.find().then((users) => {

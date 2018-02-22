@@ -1,5 +1,5 @@
 const express = require('express')
-const router = express.Router()
+const router = express.Router({ mergeParams: true })
 const Country = require('../models/country')
 
 
@@ -20,8 +20,10 @@ router.get('/', (req, res) => {
 //COUNTRY SHOW-------------------------GET//
 router.get('/:id', (req, res) => {
 
+
     Country.findById(req.params.id).then((country) => {
         res.render('country/show', {
+            countryId: req.params.countryId,
             country: country
         })
     })

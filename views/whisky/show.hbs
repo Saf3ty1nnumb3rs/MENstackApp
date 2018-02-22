@@ -1,0 +1,23 @@
+<main>
+<div class="container"></div>
+    <div>
+        <img src="{{whisky.img}}" alt="{{whisky.name}}">
+    </div>
+    <div>
+        <h1>{{whisky.name}}</h1>
+        <h2>Aged:</h2>
+        <p>{{whisky.yearsAged}}</p>
+
+        <h3>{{whisky.originCountry}}</h3>
+    </div>
+    <br>
+        <h4>{{whisky.distillery}}</h4>
+        <p> {{whisky.yearMade}} </p>
+    <div>
+        <a href="../">Back to Country</a>
+    </div>
+    <form method="POST" action="/country/:countryId/{{user.id}}?_method=DELETE">
+        <button type="submit">Delete This Whisky</button>
+    </form>
+</div>
+</main>
