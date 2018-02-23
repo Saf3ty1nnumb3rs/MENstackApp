@@ -1,29 +1,31 @@
 <main>
-    <div class="container"></div>
-    <div>
-        <img src="{{country.img}}" alt="{{country.country}}">
-    </div>
-    <div>
-        <h1>{{country.country}}</h1>
+    <div class="container">
+        <div>
+            <img class="round-image" src="{{country.img}}" alt="{{country.country}}">
+        </div>
+        <div>
+            <h1>{{country.country}}</h1>
 
-        <h3>{{country.primaryWhiskyStyle}}</h3>
-    </div>
+            <h3>{{country.primaryWhiskyStyle}}</h3>
+        </div>
 
-    <h4>Top Selling Whiskey: {{country.topSellingWhisky}}</h4>
-    <div>
-        <a href="/country">Back to Countries</a>
-        <a href="/country/{{country.id}}/edit">Edit Me</a>
-    </div>
-    <ul>
-        {{#each country.whiskyProduced}}
-        <a href="/country/{{../country.id}}/whisky/{{this._id}}">
-            <img src="{{img}}" alt="{{name}}">
+        <h4>Top Selling Whiskey: {{country.topSellingWhisky}}</h4>
+        <div>
+            <a href="/country">Back to Countries</a>
+            <a href="/country/{{country.id}}/edit">Edit Me</a>
+        </div>
+        <ul>
+            {{#each country.whiskyProduced}}
+            <div class="card">
+                <a href="/country/{{../country.id}}/whisky/{{this._id}}">
+                    <img src="{{img}}" alt="{{name}}">
 
-            <li>{{name}}</li>
+                    <li>{{name}}</li>
 
-        </a>
-        {{/each}}
-    </ul>
-    <a href="./{{country.id}}/whisky/new">New Whiskey</a>
+                </a>
+            </div>
+            {{/each}}
+        </ul>
+        <a href="./{{country.id}}/whisky/new">New Whiskey</a>
     </div>
 </main>

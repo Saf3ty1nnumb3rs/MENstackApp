@@ -1,19 +1,20 @@
 <main>
-    <div class="container"></div>
-    <div>
-        <img src="{{whisky.img}}" alt="{{whisky.name}}">
+    <div class="card">
+        <div>
+            <img class="round-image" src="{{whisky.img}}" alt="{{whisky.name}}">
+        </div>
+        <div class="container">
+            <h1>{{whisky.name}}</h1>
+            <h2>Aged:</h2>
+            <p>{{whisky.yearsAged}}</p>
+            <h2>Style</h2>
+            <p>{{whisky.style}}</p>
+            <h3>{{whisky.originCountry}}</h3>
+        </div>
+        <br>
+        <h4>{{whisky.distillery}}</h4>
+        <p> {{whisky.yearMade}} </p>
     </div>
-    <div>
-        <h1>{{whisky.name}}</h1>
-        <h2>Aged:</h2>
-        <p>{{whisky.yearsAged}}</p>
-        <h2>Style</h2>
-        <p>{{whisky.style}}</p>
-        <h3>{{whisky.originCountry}}</h3>
-    </div>
-    <br>
-    <h4>{{whisky.distillery}}</h4>
-    <p> {{whisky.yearMade}} </p>
     <div>
         <a href="../">Back to Country</a>
     </div>

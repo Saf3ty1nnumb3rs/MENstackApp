@@ -44,8 +44,10 @@ router.post('/', (req, res) => {
     }).then((updatedCountry) => {
   
       // Redirect to all whisky
-      res.redirect(`/country/${req.params.countryId}`)
-    })
+    //   res.redirect(`/country/${req.params.countryId}/whisky/`)
+
+    res.redirect(`/country/${updatedCountry._id}`)
+})
   })
 
 
@@ -101,7 +103,7 @@ router.patch('/:id', (req, res) => {
     })
 })
 
-
+//WHISKY DELETE---------------------------DESTROY//
 router.delete('/:id', (req, res) => {
     Country.findById(req.params.countryId).then((country) => {
       const whisky = country.whiskyProduced.id(req.params.id)
