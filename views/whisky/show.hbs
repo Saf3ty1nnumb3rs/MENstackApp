@@ -1,5 +1,5 @@
 <main>
-<div class="container"></div>
+    <div class="container"></div>
     <div>
         <img src="{{whisky.img}}" alt="{{whisky.name}}">
     </div>
@@ -7,19 +7,20 @@
         <h1>{{whisky.name}}</h1>
         <h2>Aged:</h2>
         <p>{{whisky.yearsAged}}</p>
-
+        <h2>Style</h2>
+        <p>{{whisky.style}}</p>
         <h3>{{whisky.originCountry}}</h3>
     </div>
     <br>
-        <h4>{{whisky.distillery}}</h4>
-        <p> {{whisky.yearMade}} </p>
+    <h4>{{whisky.distillery}}</h4>
+    <p> {{whisky.yearMade}} </p>
     <div>
         <a href="../">Back to Country</a>
     </div>
 
     <a href="./{{whisky.id}}/edit">Edit Me</a>
-    <form method="POST" action="/country/:countryId/{{user.id}}?_method=DELETE">
+    <form method="POST" action="./{{whisky.id}}?_method=DELETE">
         <button type="submit">Delete This Whisky</button>
     </form>
-</div>
+    </div>
 </main>
