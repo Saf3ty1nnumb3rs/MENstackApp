@@ -1,15 +1,22 @@
+
+
+
 <main>
 
 <h1>Whisky Lovers</h1>
+<div class="display-container">
 <ul>{{#each users}}
-    <div>
+    <div class="card">
         <a href="/users/{{_id}}">
         <img src="{{img}}" alt="{{name}}">
         <li>{{name}}</li>
+        <li>{{country}}</li>
         </a>
     </div>
     {{/each}}
 </ul>
 <br>
 <a href="/users/new">Sign Up For WISHkey</a>
+</div>
+
 </main>

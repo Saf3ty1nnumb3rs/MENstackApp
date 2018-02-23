@@ -1,18 +1,19 @@
 <main>
-    <div class="container">
+    <div class="show-container">
         <div>
-            <img class="round-image" src="{{country.img}}" alt="{{country.country}}">
+           <img class="round-image" src="{{country.img}}" alt="{{country.country}}"> 
         </div>
         <div>
             <h1>{{country.country}}</h1>
 
-            <h3>{{country.primaryWhiskyStyle}}</h3>
+            <h3>Most Popular Style: {{country.primaryWhiskyStyle}}</h3>
         </div>
 
         <h4>Top Selling Whiskey: {{country.topSellingWhisky}}</h4>
         <div>
             <a href="/country">Back to Countries</a>
-            <a href="/country/{{country.id}}/edit">Edit Me</a>
+            <br>
+            <a href="/country/{{country.id}}/edit">Edit Country</a>
         </div>
         <ul>
             {{#each country.whiskyProduced}}
@@ -26,6 +27,6 @@
             </div>
             {{/each}}
         </ul>
-        <a href="./{{country.id}}/whisky/new">New Whiskey</a>
+        <a href="./whisky/new">Add Whiskey</a>
     </div>
 </main>

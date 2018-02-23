@@ -1,27 +1,30 @@
 <main>
-<h1>Edit {{user.name}}</h1>
-<div>
+  <h1>Edit {{user.name}}</h1>
+  <div>
     <img src="{{user.img}}" alt="{{user.name}}">
-</div>
-<br>
+  </div>
+  <br>
+  <form method="POST" action="/user/{{id}}?_method=PATCH">
+    <div class="form-box">
 
-<form method="POST" action="/user/{{id}}?_method=PATCH">
-  <div>
-    <label for="name">User's Name</label>
-    <input type="text" name="name" value="{{user.name}}">
-  </div>
-  <div>
-    <label for="country">Country</label>
-    <input type="text" name="country" value="{{user.country}}">
-  </div>
-  <div>
-    <label for="favoriteWhisky">Favorite Whiskey</label>
-    <input type="text" name="favoriteWhisky" value="{{user.favoriteWhisky}}">
-  </div>
-  
-  <button type="submit">Edit user</button>
-</form>
+      <div>
+        <label for="name">User's Name</label>
+        <input type="text" name="name" value="{{user.name}}">
+      </div>
+      <div>
+        <label for="country">Country</label>
+        <input type="text" name="country" value="{{user.country}}">
+      </div>
+      <div>
+        <label for="favoriteWhisky">Favorite Whiskey</label>
+        <input type="text" name="favoriteWhisky" value="{{user.favoriteWhisky}}">
+      </div>
 
-<a href="/users/{{id}}">Back to {{user.name}}</a>
+      <button type="submit">Edit user</button>
+    </div>
+  </form>
+
+
+  <a href="/users/{{id}}">Back to {{user.name}}</a>
 
 </main>

@@ -1,62 +1,273 @@
-*{
+* {
 	margin: 0;
 	padding: 0;
 }
 
-body {
-	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-	background-color: #888888;
+*:before,
+*:after {
+	box-sizing: border-box;
 }
+
+body {
+	margin: 0;
+	background-color: #a7a7a7e8;
+	font-size: 18px;
+	font-family: 'Spectral SC', serif;
+	text-align: center;
+}
+
+div {
+	display: block;
+}
+
+div.display-container {
+	text-align: center;
+	display: inline-block;
+	width: 85vw;
+	background: white;
+	border: 1px solid #B9D6C2;
+	margin: 10px auto;
+	border-radius: 4px;
+	padding: 2em;
+	position: relative;
+	min-width: 340px;
+	max-width: 800px;
+}
+
 img {
 	width: 19vw;
 	height: 100%;
 }
 
-nav{
+nav {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	display: inline-block;
+	display: flex;
+	align-items:center;
 	background: white;
 	padding: 0.5em;
 	z-index: 1;
 	border-bottom: 1px solid #B9D6C2;
 	box-shadow: 0px 1px 1px #888888;
-	min-width: 480px;
-
+	min-width: 340px;
+	letter-spacing: 0.1em;
+}
+nav div.nav-list {
+	margin-left: 20vw; 
+}
+nav div.nav-list a{
+	padding:0 1vw;
+}
+nav h1 {
+	font-family: 'Abril Fatface', cursive;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 4vw;
 }
 
 a {
-  color: #00B7FF;
+	color: #000000;
+	text-decoration: none;
 }
+
+a:hover {
+	color: #00B7FF;
+}
+
+a span {
+	font-family: 'Abril Fatface', cursive;
+}
+
+ul li {
+	list-style: none;
+}
+
 main {
-  display: block;
 	margin: 0 auto;
-	margin-top: 100px;
+	margin-top: 180px;
 }
 
 img.round-image {
 	border-radius: 50%;
 }
+
 .card {
-	box-shadow: 1px 4px 8px 1px rgba(0,0,0,0.2);
+	box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
 	transition: 0.3s;
-	width: 30%;
+	width: 20vw;
+	min-width: 120px;
 	background-color: #FFFFFF;
+	margin: 10px auto;
+	padding-top: 10px;
+	text-align: center;
 }
+
 .card:hover {
-	box-shadow: 1px 8px 16px 1px rgba(0,0,0,0.2);
+	box-shadow: 1px 8px 16px 1px rgba(0, 0, 0, 0.2);
 }
+
 .container {
 	padding: 2px 16px;
 }
+
+.display-container {
+	justify-self: center;
+	vertical-align: middle;
+}
+
 .main-img {
 	width: 100%;
 	max-width: 280px;
 	border-bottom: 1px solid rgb(183, 226, 226);
 }
 
-.container div{
-  width: 100%;
-  margin:10px auto;
+.container div {
+	width: 100%;
+	margin: 10px auto;
 }
+form{
+	display: flex;
+	justify-content: center;
+	margin: 46px 0;
+}
+.form-box {
+	display: block;
+	text-align: end;
+	width: 21vw;
+}
+.header-image {
+	margin-left: 2vw;
+}
+.show-container {
+	text-align: center;
+	display: inline-block;
+	width: 85vw;
+	background: white;
+	border: 1px solid #B9D6C2;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right:20vw;
+	margin-left: 20vw;
+	border-radius: 4px;
+	padding: 2em;
+	position: relative;
+	min-width: 340px;
+	max-width: 800px;
+}
+
+.show-container img {
+	width: 50%;
+}
+
+.show-container ul {
+	list-style-type: none;
+	text-align: left;
+}
+
+.circle {
+	justify-self: center;
+	vertical-align: middle;
+	width: 50px;
+	height: 50px;
+	background-color: #000000;
+	border-radius: 20%;
+	margin: 0 auto;
+}
+
+.footer {
+	/* height: 33vh; */
+	bottom: 0;
+}
+
+.footer .foot-logo {
+	width: 100%;
+	height: 20vh;
+	position: relative;
+	background-color: rgba(255, 177, 60, 0.95);
+	z-index: 3;
+}
+
+.footer .foot-logo span {
+	font-size: 16px;
+	letter-spacing: 4px;
+}
+
+.footer .foot-logo span:first-child {
+	width: 38%;
+	margin-right: 20px;
+	margin-left: 12px;
+	border-right: 4px solid rgba(255, 255, 255, 0.637);
+}
+
+.footer .foot-logo span:last-child {
+	width: 38%;
+	font-size: 20px;
+	padding-left: 9px;
+	margin-left: 20px;
+	margin-right: 12px;
+	border-left: 4px solid rgba(255, 255, 255, 0.637);
+}
+
+.bottom-footer {
+	width: 100%;
+	position: absolute;
+	margin: 50px auto;
+	right: 0;
+	left: 0;  
+	padding: 1em 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Spectral SC', serif;
+}
+
+ul,
+li,
+.links-text {
+	list-style: none;
+	padding-left: 0;
+	text-align: center;
+	
+}
+.about {
+	width: calc(33.33%);
+}
+.footer h1 {
+	position: relative;
+	top: 38%;
+	margin: 0;
+}
+
+.bottom-logo,
+.footer .foot-logo {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	text-align: center;
+}
+
+.bottom-logo {
+	bottom: 10%;
+	width: 100%;
+}
+
+.bottom-logo span {
+	font-size: 16px;
+	letter-spacing: 4px;
+}
+
+.bottom-logo span:first-child {
+	width: 38%;
+	margin-right: 20px;
+	margin-left: 12px;
+	border-right: 4px solid rgba(255, 255, 255, 0.637);
+}
+
+.bottom-logo span:last-child {
+	width: 38%;
+	font-size: 20px;
+	padding-left: 9px;
+	margin-left: 20px;
+	margin-right: 12px;
+	border-left: 4px solid rgba(255, 255, 255, 0.637);

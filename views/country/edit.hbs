@@ -1,18 +1,24 @@
-<div>
-    <img src="{{country.img}}" alt="{{country.country}}">
-</div>
-<h1>Edit {{country.country}}</h1>
-<form method="POST" action="/country/{{id}}?_method=PATCH">
-  <div>
-    <label for="primaryWhiskyStyle">Style of Whisky</label>
-    <input type="text" name="primaryWhiskyStyle" value="{{country.primaryWhiskyStyle}}">
-  </div>
-  <div>
-    <label for="topSellingWhisky">Top Seller</label>
-    <input type="text" name="topSellingWhisky" value="{{country.topSellingWhisky}}">
-  </div>
-  
-  <button type="submit">Edit Country</button>
-</form>
+<main>
 
-<a href="../{{id}}">Back to {{country.country}}</a>
+  <div>
+    <img src="{{country.img}}" alt="{{country.country}}">
+  </div>
+  <h1>Edit {{country.country}}</h1>
+  
+    <form method="POST" action="/country/{{id}}?_method=PATCH">
+      <div class="form-box">
+      <div>
+        <label for="primaryWhiskyStyle">Style of Whisky</label>
+        <input type="text" name="primaryWhiskyStyle" value="{{country.primaryWhiskyStyle}}">
+      </div>
+      <div>
+        <label for="topSellingWhisky">Top Seller</label>
+        <input type="text" name="topSellingWhisky" value="{{country.topSellingWhisky}}">
+      </div>
+
+      <button type="submit">Edit Country</button>
+      </div>
+    </form>
+  </div>
+  <a href="../{{id}}">Back to {{country.country}}</a>
+</main>
