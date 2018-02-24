@@ -31,3 +31,6 @@ https://github.com/Saf3ty1nnumb3rs/MENstackApp
 * ExpressJS
 * NodeJS
 * Heroku
+
+### Favorite Bug - When editing Country object, the list of whiskies would remain on return to page as expected. While editing User object, the list of whiskies associated would be removed on return to the page which was not the desired result.
+### All processes were identical on view pages. Checking the database on Mongo revealed that the whisky objects had been deleted. This led to observing the routes - this revealed that the `favoriteWhisky` was being called when patching the User when no value was being entered for `favoriteWhisky`. This effectively eliminated all objects in the array. Simply removing the req for favorites meant the original data would persist unless being manipulated through it's proper route.
