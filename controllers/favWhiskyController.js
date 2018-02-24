@@ -85,7 +85,7 @@ router.patch('/:id', (req, res) => {
     User.findById(req.params.userId).then((user) => {
         // We don't have a nice method like findByIdAndUpdate here
         // so instead we need to manually change the sodas values
-        const whisky = User.favoriteWhisky.id(req.params.id)
+        const whisky = user.favoriteWhisky.id(req.params.id)
         whisky.name = req.body.name
         whisky.img = req.body.img
         whisky.distillery = req.body.distillery
