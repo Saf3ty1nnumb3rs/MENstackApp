@@ -12,7 +12,7 @@
         <li>{{name}}</li>
         <li>{{country}}</li>
         </a>
-        <form method="POST" action="/users/{{_id}}?_method=DELETE">
+        <form method="GET" action="/users/{{_id}}?_method=GET">
             <button class="view" type="submit"><a href="/users/{{_id}}">Profile View</a></button>
         </form>
     </div>
