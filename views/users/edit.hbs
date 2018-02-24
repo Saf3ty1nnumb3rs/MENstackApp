@@ -1,7 +1,7 @@
 <main>
   <h1>Edit {{user.name}}</h1>
   <div>
-    <img src="{{user.img}}" alt="{{user.name}}">
+    <img class="pic-box" src="{{user.img}}" alt="{{user.name}}">
   </div>
   <br>
   <form method="POST" action="/users/{{id}}?_method=PATCH">
