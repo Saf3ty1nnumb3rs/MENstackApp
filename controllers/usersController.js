@@ -67,7 +67,6 @@ router.patch('/:id', (req, res) => {
       name: req.body.name,
       img: req.body.img,
       country: req.body.country,
-      favoriteWhisky: req.body.favoriteWhisky,
     }, {new: true}).then((updatedUser) => {
         res.redirect(`/users/${updatedUser._id}`)
     })

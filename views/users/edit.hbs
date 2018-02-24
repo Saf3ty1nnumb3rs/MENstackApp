@@ -4,7 +4,7 @@
     <img src="{{user.img}}" alt="{{user.name}}">
   </div>
   <br>
-  <form method="POST" action=".?_method=PATCH">
+  <form method="POST" action="/users/{{id}}?_method=PATCH">
     <div class="form-box">
       <div>
         <label for="name">User's Name</label>
@@ -24,6 +24,6 @@
   </form>
 
 
-  <a href="/users/{{id}}">Back to {{user.name}}</a>
+  <a href="../{{id}}">Back to {{user.name}}</a>
 
 </main>
