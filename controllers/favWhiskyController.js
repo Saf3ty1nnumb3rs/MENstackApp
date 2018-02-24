@@ -15,7 +15,7 @@ router.get('/new', (req, res) => {
         UserId: req.params.UserId
     })
 })
-
+//AOK!!!
 //WHISKY CREATE------------------------------------POST//
 router.post('/', (req, res) => {
 
@@ -46,14 +46,14 @@ router.post('/', (req, res) => {
         res.redirect(`/users/${updatedUser._id}`)
     })
 })
-
+//Also AOK!!!!!
 
 //WHISKY SHOW-------------------------GET//
 router.get('/:id', (req, res) => {
 
     User.findById(req.params.userId).then((user) => {
 
-        const whisky = User.favoriteWhisky.id(req.params.id)
+        const whisky = user.favoriteWhisky.id(req.params.id)
 
         res.render('favWhisky/show', {
             UserId: req.params.userId,
@@ -62,6 +62,7 @@ router.get('/:id', (req, res) => {
     })
 
 })
+//Works!! Can you believe it??!!!?????
 
 //WHISKY EDIT------------------------------GET//
 
