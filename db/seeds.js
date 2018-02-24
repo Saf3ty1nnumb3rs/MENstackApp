@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const Whisky = require('../models/whisky')
 const Country = require('../models/country')
 const User = require('../models/user')
+const FavWhisky = require('../models/whisky')
 
 
 mongoose.connect(process.env.MONGODB_URI)

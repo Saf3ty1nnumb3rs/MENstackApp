@@ -5,4 +5,4 @@ const favWhiskySchema = require('../db/schemas/whiskySchema')
 const Whisky = mongoose.model('whisky', whiskySchema)
 const FavWhisky = mongoose.model('favWhisky', favWhiskySchema)
 
-module.exports = {Whisky, FavWhisky}
+module.exports = Whisky, FavWhisky

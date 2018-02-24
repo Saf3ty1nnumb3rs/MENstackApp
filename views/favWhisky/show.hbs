@@ -1,0 +1,29 @@
+<main>
+    <div class="card">
+        <div>
+            <img class="round-image" src="{{whisky.img}}" alt="{{whisky.name}}">
+        </div>
+        <div class="container">
+            <h1>{{whisky.name}}</h1>
+            <h3>Aged:</h3>
+            <p>{{whisky.yearsAged}} years</p>
+            <h3>Style</h3>
+            <p>{{whisky.style}}</p>
+            <h3>Origin:</h3>
+            <p>{{whisky.originCountry}}</p>
+            <h4>{{whisky.distillery}}</h4>
+            <p> {{whisky.yearMade}} </p>
+        </div>
+        <br>
+
+    </div>
+    <div>
+        <a href="../">Back to User</a>
+    </div>
+
+    <a href="./{{whisky.id}}/edit">Edit Me</a>
+    <form method="POST" action="./{{whisky.id}}?_method=DELETE">
+        <button class="delete" type="submit">Delete This Whisky</button>
+    </form>
+    </div>
+</main>
