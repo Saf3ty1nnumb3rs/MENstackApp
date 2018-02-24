@@ -11,8 +11,8 @@ const db = mongoose.connection
 
 db.on('open', () => {
     console.log('Successfully connected to mongoDB')
-  })
-  
+})
+
 db.on('error', (err) => {
     console.log(err)
 })
@@ -98,6 +98,13 @@ const usa = new Country({
     topSellingWhisky: "Jack Daniel's",
     whiskyProduced: [bulleit]
 })
+const canada = new Country({
+    country: 'Canada',
+    img: 'https://t3.ftcdn.net/jpg/00/54/27/10/240_F_54271016_zXrqtDpHheoGVnX11ohnn8KAJ0JtUyAK.jpg',
+    primaryWhiskyStyle: 'Whats whiskey aboot',
+    topSellingWhisky: "Crown Royal",
+    whiskyProduced: [bulleit]
+})
 const ireland = new Country({
     country: 'Ireland',
     img: 'https://cdn3.bigcommerce.com/s-npe4l/products/1163/images/1336/B-PA-IRL---HIGH__71788.1477602948.380.380.jpg?c=2',
@@ -112,19 +119,29 @@ const asia = new Country({
     topSellingWhisky: "Officer's Choice Rare",
     whiskyProduced: [kavalan]
 })
-
-
+const winston = new User({
+    name: 'Winston Churchill',
+    img: 'https://quotepics.com/wp-content/uploads/2018/02/Winston-Churchill-quote-I-may-be-drunk-but-in-the-morning-Ill-be-sober-and-youll-still-be-ugly..jpg',
+    country: 'UK',
+    favoriteWhisky: 'Bowmore 15',
+})
 const bender = new User({
     name: 'Bender',
-    img: 'https://memegenerator.net/img/instances/26693568/were-going-to-start-our-own-homebrew-club-with-whiskey-and-hookers.jpg',                
+    img: 'https://memegenerator.net/img/instances/26693568/were-going-to-start-our-own-homebrew-club-with-whiskey-and-hookers.jpg',
     country: 'Earth',
     favoriteWhisky: 'Hakushu 1200',
 })
 const domokun = new User({
     name: 'Domo Kun',
-    img: 'https://imgs.tuts.dragoart.com/how-to-draw-domo-kun_1_000000002826_3.jpg',                
+    img: 'https://imgs.tuts.dragoart.com/how-to-draw-domo-kun_1_000000002826_3.jpg',
     country: 'Japan',
     favoriteWhisky: 'Whisky that is liquid',
+})
+const drunky = new User({
+    name: 'Drunk Monkey',
+    img: 'https://wedding-assets.s3.amazonaws.com/uploads/cache/attachments/portfolios/aa9ed4465fb94b99e24ce13d97ab09d1-35bbb835292e4a5b14de5ef97e848f94-940x626.jpg',
+    country: 'USA',
+    favoriteWhisky: 'All of the whisky',
 })
 
 Whisky.remove().then(() => {
@@ -132,9 +149,9 @@ Whisky.remove().then(() => {
 }).then(() => {
     return User.remove()
 }).then(() => {
-    return Country.insertMany([asia, ireland, usa, scotland, japan])
+    return Country.insertMany([asia, ireland, usa, scotland, japan, canada])
 }).then(() => {
-    return User.insertMany([bender, domokun])
+    return User.insertMany([bender, domokun, drunky, winston])
 }).then(() => {
     console.log('Saved successfully')
     db.close()

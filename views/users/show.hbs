@@ -1,22 +1,27 @@
 <main>
-<div class="container">
-    <div>
-        <img src="{{user.img}}" alt="{{user.name}}">
-    </div>
-    <div>
-        <h1>{{user.name}}</h1>
+    <div class="container">
+        <div>
+            <img src="{{user.img}}" alt="{{user.name}}">
+        </div>
+        <div>
+            <h1>{{user.name}}</h1>
 
-        <h3>{{user.country}}</h3>
-    </div>
-    
+            <h3>{{user.country}}</h3>
+        </div>
+
         <h4>{{user.name}}'s Favorite Whiskey:</h4>
         <p> {{user.favoriteWhisky}} </p>
-    <div>
-        <a href="/users/{{user.id}}/edit">Edit Me</a>
-        <a href="/users/">Back to Users</a>
+        <div>
+            <button>
+                <a href="/users/{{user.id}}/edit">Edit Me</a>
+            </button>
+            <button>
+                <a href="/users/">Back to Users</a>
+            </button>
+
+        </div>
+        <form method="POST" action="/users/{{user.id}}?_method=DELETE">
+            <button class="delete" type="submit">Delete This Account</button>
+        </form>
     </div>
-    <form method="POST" action="/users/{{user.id}}?_method=DELETE">
-        <button type="submit">Delete This Account</button>
-    </form>
-</div>
 </main>

@@ -75,9 +75,16 @@ button {
 	font-size: 10px;
 	box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
 }
+button:active {
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+	transition: 0.3s;
+  }
 button.submit {
 	background-color: #70fd7b;
-
+}
+button.delete {
+	background-color: #fd7070;
 }
 .button-box {
 	display: flex;
