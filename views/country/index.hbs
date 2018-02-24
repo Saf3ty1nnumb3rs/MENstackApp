@@ -1,14 +1,16 @@
-<h1>Whisky Producing Countries</h1>
-<div class="display-container">
-    <ul>{{#each countries}}
-        <div class="card container">
+<main>
+    <h1>Regions & Countries</h1>
+    <div class="display-container">
+        <ul>{{#each countries}}
+            <div class="card container">
 
-            <a href="/country/{{_id}}">
-                <img class="round-image" src="{{img}}" alt="{{country}}">
-                <li>{{country}}</li>
-            </a>
+                <a href="/country/{{_id}}">
+                    <img class="round-image" src="{{img}}" alt="{{country}}">
+                    <li>{{country}}</li>
+                </a>
 
-        </div>
-        {{/each}}
-    </ul>
-</div>
+            </div>
+            {{/each}}
+        </ul>
+    </div>
+</main>

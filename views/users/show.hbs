@@ -1,5 +1,5 @@
 <main>
-    <div class="container">
+    <div class="show-container">
         <div>
             <img class="soft-image" src="{{user.img}}" alt="{{user.name}}">
         </div>
@@ -8,9 +8,6 @@
 
             <h3>{{user.country}}</h3>
         </div>
-
-        <h4>{{user.name}}'s Favorite Whiskey:</h4>
-
         <div>
             <button>
                 <a href="/users/{{user.id}}/edit">Edit Me</a>
@@ -20,6 +17,9 @@
             </button>
 
         </div>
+        <h4>{{user.name}}'s Favorite Whiskey:</h4>
+
+
         <ul>
             {{#each user.favoriteWhisky}}
             <div class="card">
@@ -32,6 +32,7 @@
             </div>
             {{/each}}
         </ul>
+
         <a href="./{{user.id}}/favWhisky/new">Add Whiskey</a>
         <form method="POST" action="/users/{{user.id}}?_method=DELETE">
             <button class="delete" type="submit">Delete This Account</button>
