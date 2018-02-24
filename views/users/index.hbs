@@ -13,7 +13,7 @@
         <li>{{country}}</li>
         </a>
         <form method="POST" action="/users/{{_id}}?_method=DELETE">
-            <button class="delete" type="submit">Delete This Account</button>
+            <button class="view" type="submit"><a href="/users/{{_id}}">Profile View</a></button>
         </form>
     </div>
     {{/each}}
