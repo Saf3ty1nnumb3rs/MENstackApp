@@ -2,14 +2,16 @@
     <h1>Regions & Countries</h1>
     <div class="display-container">
         <ul class="flex-list">{{#each countries}}
-            <div class="card container">
+            <a href="/country/{{_id}}">
+                <div class="card container">
 
-                <a href="/country/{{_id}}">
+
                     <img class="round-image" src="{{img}}" alt="{{country}}">
                     <li>{{country}}</li>
-                </a>
 
-            </div>
+
+                </div>
+            </a>
             {{/each}}
         </ul>
     </div>
