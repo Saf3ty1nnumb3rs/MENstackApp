@@ -1,21 +1,18 @@
 const express = require('express')
-const router = express.Router({
-    mergeParams: true
-})
+const router = express.Router({mergeParams: true})
+
 const User = require('../models/user')
 const Whisky = require('../models/whisky')
-const Country = require('../models/country')
-
-
-
+const Country = require('../models/whisky')
+const FavWhisky = require('../models/whisky')
 
 //WHISKY NEW--------------------------------GET//
 
 router.get('/new', (req, res) => {
 
-    // We only need to pass the country ID to this new view
-    res.render('whisky/new', {
-        countryId: req.params.countryId
+    // We only need to pass the User ID to this new view
+    res.render('favWhisky/new', {
+        UserId: req.params.UserId
     })
 })
 
@@ -23,7 +20,7 @@ router.get('/new', (req, res) => {
 router.post('/', (req, res) => {
 
     // Get company we need to save whisky to
-    Country.findById(req.params.countryId).then((country) => {
+    User.findById(req.params.userId).then((user) => {
 
         // THEN once we have the company, take req.body and make a new whisky
         const newWhisky = new Whisky({
@@ -37,16 +34,16 @@ router.post('/', (req, res) => {
         })
 
         // Push whisky to company.whisky
-        country.whiskyProduced.push(newWhisky)
+        user.favoriteWhisky.push(newWhisky)
 
         // Save Company
-        return country.save()
-    }).then((updatedCountry) => {
+        return user.save()
+    }).then((updatedUser) => {
 
         // Redirect to all whisky
-        //   res.redirect(`/country/${req.params.countryId}/whisky/`)
+        //   res.redirect(`/User/${req.params.UserId}/whisky/`)
 
-        res.redirect(`/country/${updatedCountry._id}`)
+        res.redirect(`/users/${updatedUser._id}`)
     })
 })
 
@@ -54,12 +51,12 @@ router.post('/', (req, res) => {
 //WHISKY SHOW-------------------------GET//
 router.get('/:id', (req, res) => {
 
-    Country.findById(req.params.countryId).then((country) => {
+    User.findById(req.params.userId).then((user) => {
 
-        const whisky = country.whiskyProduced.id(req.params.id)
+        const whisky = User.favoriteWhisky.id(req.params.id)
 
-        res.render('whisky/show', {
-            countryId: req.params.countryId,
+        res.render('favWhisky/show', {
+            UserId: req.params.userId,
             whisky: whisky
         })
     })
@@ -71,10 +68,10 @@ router.get('/:id', (req, res) => {
 router.get('/:id/edit', (req, res) => {
 
 
-    Country.findById(req.params.countryId).then((country) => {
-        const whisky = country.whiskyProduced.id(req.params.id)
-        res.render('whisky/edit', {
-            countryId: req.params.countryId,
+    User.findById(req.params.userId).then((user) => {
+        const whisky = user.favoriteWhisky.id(req.params.id)
+        res.render('favWhisky/edit', {
+            userId: req.params.UserId,
             whisky: whisky
         })
     })
@@ -84,33 +81,33 @@ router.get('/:id/edit', (req, res) => {
 // WHISKY PATCH-----------------------UPDATE//
 
 router.patch('/:id', (req, res) => {
-    Country.findById(req.params.countryId).then((country) => {
+    User.findById(req.params.userId).then((user) => {
         // We don't have a nice method like findByIdAndUpdate here
         // so instead we need to manually change the sodas values
-        const whisky = country.whiskyProduced.id(req.params.id)
+        const whisky = User.favoriteWhisky.id(req.params.id)
         whisky.name = req.body.name
         whisky.img = req.body.img
         whisky.distillery = req.body.distillery
         whisky.yearMade = req.body.yearMade
         whisky.style = req.body.style
         whisky.yearsAged = req.body.yearsAged
-        whisky.originCountry = req.body.originCountry
+        whisky.originUser = req.body.originUser
 
-        // Then Save the country
-        return country.save()
-    }).then((updatedCountry) => {
-        res.redirect(`/country/${updatedCountry._id}/whisky/${req.params.id}`)
+        // Then Save the User
+        return user.save()
+    }).then((updatedUser) => {
+        res.redirect(`/users/${updatedUser._id}/favWhisky/${req.params.id}`)
     })
 })
 
 //WHISKY DELETE---------------------------DESTROY//
 router.delete('/:id', (req, res) => {
-    Country.findById(req.params.countryId).then((country) => {
-        const whisky = country.whiskyProduced.id(req.params.id)
+    User.findById(req.params.userId).then((user) => {
+        const whisky = User.favoriteWhisky.id(req.params.id)
         whisky.remove()
-        return country.save()
+        return user.save()
     }).then(() => {
-        res.redirect(`/country/${req.params.countryId}`)
+        res.redirect(`/users/${req.params.UserId}`)
     })
 })
 module.exports = router

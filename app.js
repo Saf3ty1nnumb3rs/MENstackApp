@@ -12,6 +12,7 @@ const index = require('./controllers/index')
 const usersController = require('./controllers/usersController')
 const whiskyController = require('./controllers/whiskyController')
 const countryController = require('./controllers/countryController')
+const favWhiskyController = require('./controllers/favWhiskyController')
 
 const app = express()
 
@@ -45,6 +46,7 @@ app.use('/', index)
 app.use('/users', usersController)
 app.use('/country/:countryId/whisky', whiskyController)
 app.use('/country', countryController)
+app.use('/users/:userId/favWhisky', favWhiskyController)
 
 
 // catch 404 and forward to error handler

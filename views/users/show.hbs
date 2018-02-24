@@ -20,6 +20,18 @@
             </button>
 
         </div>
+        <ul>
+            {{#each user.whiskyProduced}}
+            <div class="card">
+                <a href="/users/{{../user.id}}/favWhisky/{{this._id}}">
+                    <img src="{{img}}" alt="{{name}}">
+
+                    <li>{{name}}</li>
+
+                </a>
+            </div>
+            {{/each}}
+        </ul>
         <form method="POST" action="/users/{{user.id}}?_method=DELETE">
             <button class="delete" type="submit">Delete This Account</button>
         </form>
