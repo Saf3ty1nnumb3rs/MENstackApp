@@ -104,11 +104,11 @@ router.patch('/:id', (req, res) => {
 //WHISKY DELETE---------------------------DESTROY//
 router.delete('/:id', (req, res) => {
     User.findById(req.params.userId).then((user) => {
-        const whisky = User.favoriteWhisky.id(req.params.id)
+        const whisky = user.favoriteWhisky.id(req.params.id)
         whisky.remove()
         return user.save()
     }).then(() => {
-        res.redirect(`/users/${req.params.UserId}`)
+        res.redirect(`/users/${req.params.userId}`)
     })
 })
 module.exports = router
