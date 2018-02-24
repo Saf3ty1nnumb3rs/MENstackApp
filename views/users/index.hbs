@@ -1,25 +1,21 @@
-
-
-
 <main>
 
-<h1>Whisk(e)y Lovers</h1>
-<div class="display-container">
-<ul>{{#each users}}
-    <div class="card">
-        <a href="/users/{{_id}}">
-        <img class="soft-image" src="{{img}}" alt="{{name}}">
-        <li>{{name}}</li>
-        <li>{{country}}</li>
+    <h1>Whisk(e)y Lovers</h1>
+    <div class="display-container">
+        <ul class="flex-list">{{#each users}}
+           <a href="/users/{{_id}}"> 
+            <div class="card user">
+                    <img class="soft-image" src="{{img}}" alt="{{name}}">
+                    <li>{{name}}</li>
+                    <li>{{country}}</li>
+            </div>
+            </a>
+            {{/each}}
+        </ul>
+        <br>
+        <a href="/users/new">Sign Up For
+            <span>WISHkey</span>
         </a>
-        <form method="GET" action="/users/{{_id}}?_method=GET">
-            <button class="view" type="submit"><a href="/users/{{_id}}">Profile View</a></button>
-        </form>
     </div>
-    {{/each}}
-</ul>
-<br>
-<a href="/users/new">Sign Up For <span>WISHkey</span></a>
-</div>
 
 </main>
