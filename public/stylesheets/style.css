@@ -5,7 +5,7 @@
 
 *:before,
 *:after {
-	box-sizing: inherit;
+	box-sizing: border-box;
 }
 
 body {
@@ -17,6 +17,7 @@ body {
 }
 body, html {
 	height: 100%;
+	box-sizing: border-box;
 }
 
 div {
@@ -45,16 +46,15 @@ img {
 nav {
 	position: fixed;
 	top: 0;
-	width: 99vw;
+	width: 100vw;
 	display: flex;
 	align-items: center;
 	background: white;
-	padding: 0.5em;
 	z-index: 1;
 	border-bottom: 1px solid rgb(33, 37, 34);
 	box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
 	min-width: 340px;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.07em;
 }
 
 nav div.nav-list {
@@ -182,7 +182,8 @@ button.hamburger {
 	box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
 	border: none;
 	z-index: 100;
-	margin-left: 30vw;
+	margin-right:10px;
+	margin-left: 25vw;
 }
 
 .hamburger {
@@ -224,7 +225,7 @@ button.hamburger {
 	position: relative;
 	font-family: 'Abril Fatface', cursive;
 	top: 40%;
-	height: 80%;
+	height: 55%;
 	font-size: 8vw;
 	text-shadow: 1px 1px #6790a0;
 	transform: translateY(-36%);
@@ -247,7 +248,7 @@ button.hamburger {
 .menu-overlay li {
 	display: block;
 	height: calc(100%/4);
-	margin: auto auto;
+	
 }
 
 ul li {
@@ -364,9 +365,9 @@ input:focus {
 }
 
 .header-image {
-	margin-left: 2vw;
+	margin-left: 1vw;
 }
-
+/* SHOW PAGE STYLIONG---------------------------------- */
 .show-container {
 	text-align: center;
 	display: inline-block;
@@ -394,7 +395,7 @@ img.soft-image {
 	border-radius: 12px;
 	box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
 }
-
+/* END SHOW PAGE STYLING ---------------------------*/
 .circle {
 	justify-self: center;
 	vertical-align: middle;
