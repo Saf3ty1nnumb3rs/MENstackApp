@@ -69,6 +69,8 @@ router.patch('/:id', (req, res) => {
       country: req.body.country,
     }, {new: true}).then((updatedUser) => {
         res.redirect(`/users/${updatedUser._id}`)
+    }).catch((err)=>{
+        console.log(err)
     })
 })
 
