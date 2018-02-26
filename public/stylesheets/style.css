@@ -138,6 +138,9 @@ img.landing-img {
 	}
 	
 }
+.back-to {
+	margin: 10px auto;
+}
 .button-box {
 	display: flex;
 	justify-content: space-around;

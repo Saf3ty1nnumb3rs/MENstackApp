@@ -4,9 +4,9 @@
     <img class="round-image" src="{{country.img}}" alt="{{country.country}}">
   </div>
   <h1>Edit {{country.country}}</h1>
-  
-    <form method="POST" action="/country/{{id}}?_method=PATCH">
-      <div class="form-box">
+
+  <form method="POST" action="/country/{{id}}?_method=PATCH">
+    <div class="form-box">
       <div>
         <label for="primaryWhiskyStyle">Style of Whisky</label>
         <input type="text" name="primaryWhiskyStyle" value="{{country.primaryWhiskyStyle}}">
@@ -17,8 +17,13 @@
       </div>
 
       <button type="submit">Edit Country</button>
-      </div>
-    </form>
-
-  <a href="../{{id}}">Back to {{country.country}}</a>
+    </div>
+  </form>
+  <div class="back-to">
+    <a href="../{{id}}">
+      <button>
+        Back to {{country.country}}
+      </button>
+    </a>
+  </div>
 </main>

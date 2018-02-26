@@ -17,14 +17,16 @@
         </div>
         <ul>
             {{#each country.whiskyProduced}}
+            <a href="/country/{{../country.id}}/whisky/{{this._id}}">
             <div class="card">
-                <a href="/country/{{../country.id}}/whisky/{{this._id}}">
-                    <img src="{{img}}" alt="{{name}}">
 
-                    <li>{{name}}</li>
+                <img src="{{img}}" alt="{{name}}">
 
-                </a>
+                <li>{{name}}</li>
+
+
             </div>
+            </a>
             {{/each}}
         </ul>
         <a href="./{{country.id}}/whisky/new">Add Whiskey</a>
