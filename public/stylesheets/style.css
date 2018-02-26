@@ -185,11 +185,10 @@ img.round-image {
 	white-space: nowrap;
 }
 h1.banner {
-	width: 34vw;
 	background-color: #FFFFFF;
 	border-bottom: 2px solid rgb(163, 223, 223);
 	margin:0 auto 10px auto;
-	font-size: 3vw;
+	font-size: 38px;
 }
 /* HAMBURGER STYLES --------------------------------- */
 
@@ -421,7 +420,7 @@ input:focus {
 
 img.soft-image {
 	border-radius: 12px;
-	box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
+	/* box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2); */
 }
 /* END SHOW PAGE STYLING ---------------------------*/
 .circle {
