@@ -176,7 +176,7 @@ Whisky.remove().then(() => {
 }).then(() => {
     return Country.insertMany([asia, ireland, usa, scotland, japan, canada])
 }).then(() => {
-    return User.insertMany([bender, domokun, drunky, winston, beckham])
+    return User.insertMany([bender, domokun, drunky, winston, beckham, steve])
 }).then(() => {
     console.log('Saved successfully')
     db.close()
