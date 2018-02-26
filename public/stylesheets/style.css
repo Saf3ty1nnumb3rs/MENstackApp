@@ -10,8 +10,7 @@
 
 body {
 	margin: 0;
-	background-color:#FFFFFF;
-	/* background-color: #a7a7a7e8; */
+	background-color:rgb(243, 240, 240)
 	font-size: 18px;
 	font-family: 'Spectral SC', serif;
 	text-align: center;
