@@ -240,7 +240,7 @@ button.hamburger {
 	text-align: center;
 	position: relative;
 	font-family: 'Spectral SC', serif;
-	top: 48%;
+	top: 43%;
 	height: 55%;
 	width: 90vw;
 	margin: 0 auto;
@@ -265,7 +265,7 @@ button.hamburger {
 
 .menu-overlay li {
 	display: block;
-	height: calc(100%/4);
+	height: calc(100%/5);
 		
 }
 
@@ -392,9 +392,7 @@ input:focus {
 	.landing {
 		background-position-x: 12%;
 	}
-	.landing h4{
-		margin: 0 50vw 20vw 10vw;
-	}
+	
 }
 @media (max-width: 586px) {
 		.landing h4 {
