@@ -10,7 +10,7 @@
 
 body {
 	margin: 0;
-	background-color:rgb(14, 37, 110);
+	background-color:#FFFFFF;
 	/* background-color: #a7a7a7e8; */
 	font-size: 18px;
 	font-family: 'Spectral SC', serif;
@@ -30,16 +30,14 @@ div.display-container {
 	display: inline-block;
 	width: 85vw;
 	background: white;
-	border: 1px solid #B9D6C2;
 	margin: 10px auto 30px auto;
-	border-radius: 4px;
 	padding: 1em;
 	position: relative;
 	min-width: 240px;
 	max-width: 800px;
 	justify-self: center;
 	vertical-align: middle;
-	box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
+	border-bottom: 2px solid rgb(0, 163, 228) ;
 	}
 
 
@@ -48,7 +46,7 @@ img {
 	height: auto;
 }
 
-nav {
+nav.head {
 	position: fixed;
 	top: 0;
 	width: 100vw;
@@ -117,14 +115,11 @@ img.landing-img {
 	background-image: url("https://s-media-cache-ak0.pinimg.com/originals/55/48/be/5548be7c87b6f005c5a711ef780a1a0d.jpg");
 	min-height: 90vh;
 	background-attachment: fixed;
-	background-position: center;
+	background-position: 30% 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
 	margin: 0;
 	position: relative;
-}
-@media (max-width: 716px){
-	
 }
 
 .landing h4 {
@@ -190,9 +185,9 @@ img.round-image {
 	white-space: nowrap;
 }
 h1.banner {
-	width: 40vw;
+	width: 34vw;
 	background-color: #FFFFFF;
-	box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
+	border-bottom: 2px solid rgb(163, 223, 223);
 	margin:0 auto 10px auto;
 	font-size: 3vw;
 }
@@ -248,14 +243,15 @@ button.hamburger {
 }
 
 .menu-overlay nav {
+	background: rgb(14, 37, 110);
 	text-align: center;
 	position: relative;
-	font-family: 'Bungee Shade', cursive;
-	top: 40%;
-	height: 30vw;
+	font-family: 'Spectral SC', serif;
+	top: 48%;
+	height: 55%;
 	width: 90vw;
 	margin: 0 auto;
-	font-size: 6vw;
+	font-size: 40px;
 	text-shadow: 1px 1px #6790a0;
 	transform: translateY(-36%);
 }
@@ -277,9 +273,11 @@ button.hamburger {
 .menu-overlay li {
 	display: block;
 	height: calc(100%/4);
-	
+		
 }
-
+li > a {
+	color: white;
+}
 ul li {
 	list-style: none;
 	/* color: rgba(218, 228, 227, 0.89); */
@@ -405,9 +403,7 @@ input:focus {
 	display: inline-block;
 	width: 85vw;
 	background: white;
-	border: 1px solid #B9D6C2;
 	margin: 10px auto;
-	border-radius: 4px;
 	padding: 2em;
 	position: relative;
 	min-width: 340px;
