@@ -64,7 +64,7 @@ nav {
 }
 
 nav div.nav-list {
-	margin-left: 8vw;
+	margin-left: 2vw;
 }
 
 nav div.nav-list a {
@@ -75,8 +75,8 @@ nav h1 {
 	font-family: 'Bungee Shade', cursive;
 	font-style: normal;
 	font-weight: 400;
-	font-size: 4vw;
-	margin: 0 40px 0 20px;
+	font-size: 48px;
+	margin-left: 20px;
 }
 
 button {
@@ -123,6 +123,9 @@ img.landing-img {
 	margin: 0;
 	position: relative;
 }
+@media (max-width: 716px){
+	
+}
 
 .landing h4 {
 	display: flex;
@@ -139,6 +142,7 @@ img.landing-img {
 	.landing h4 {
 		margin: 0 auto;
 	}
+	
 }
 .button-box {
 	display: flex;
@@ -174,12 +178,14 @@ img.round-image {
 	span.go-away {
 		display: none;
 	}
+	.landing {
+		background-position-x: 12%;
+	}
 }
 
 .right-menu {
-	margin-left: 3%;
 	padding-right: 5%;
-	align-items: center;
+	text-align: center;
 	display: inline-flex;
 	white-space: nowrap;
 }
@@ -195,11 +201,17 @@ h1.banner {
 button.hamburger {
 	box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
 	border: none;
-	z-index: 100;
+	z-index: 1000;
 	margin-right:10px;
-	margin-left: 25vw;
+	margin-left: 10vw;
 }
+@media (max-width: 510px) {
+	button.hamburger {
+		margin-left: 3px;
+		margin-right:10px;
+	}
 
+}
 .hamburger {
 	z-index: 20;
 	position: relative;
@@ -217,6 +229,7 @@ button.hamburger {
 	button.hamburger {
 		display: none;
 	}
+	
 }
 /* MENU OVERLAY SECTION------------------------------ */
 
@@ -284,11 +297,6 @@ ul li {
 	visibility: hidden;
 }
 
-@media (max-width: 1032px) {
-	.link-build {
-		display: none;
-	}
-}
 
 /* END LINK HIDE --------------------------------------- */
 
@@ -376,7 +384,20 @@ input:focus {
 }
 
 .header-image {
-	margin-left: 1vw;
+	margin-left: 4vw;
+}
+@media (max-width: 1076px) {
+	.header-image {
+		margin-left: 8vw;
+	}
+	.link-build {
+		display: none;
+	}
+}
+@media (max-width: 460px){
+	.header-image {
+		display: none;
+	}
 }
 /* SHOW PAGE STYLIONG---------------------------------- */
 .show-container {
