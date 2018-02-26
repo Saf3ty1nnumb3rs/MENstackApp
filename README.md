@@ -29,6 +29,17 @@ https://trello.com/b/8XBgNv6q/wdi-project-2-data-connection
 
 https://github.com/Saf3ty1nnumb3rs/MENstackApp
 
+## Desired additions:
+
+* ### An increase in the complexity of relationships and tackling accessing objects through objectID's will aid in a more rich user experience.
+
+* ### I will be adding if statements to help populate lack of profile pictures on user profile additions. Thanks for the tip Marco!
+
+* ### Need to create dropdowns for certain form fields to make some items more uniform - i.e. Country of origin for users. I would also like to increase the database size to include more whisky producing countries and whiskies.
+
+* ### I would like to utilize user authentification in order to create an actual login to the site and restrict manipulation of other user's data.
+
+* ### Styles need to be more fluid and need a great deal of work.
 
 
 ## Technologies Used for the Development of This App

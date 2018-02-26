@@ -3,12 +3,12 @@
     <h1 class="banner">Whisk(e)y Lovers</h1>
     <div class="display-container">
         <ul class="flex-list">{{#each users}}
-           <a href="/users/{{_id}}"> 
-            <div class="card user">
+            <a href="/users/{{_id}}">
+                <div class="card user">
                     <img class="soft-image" src="{{img}}" alt="{{name}}">
                     <li>{{name}}</li>
                     <li>{{country}}</li>
-            </div>
+                </div>
             </a>
             {{/each}}
         </ul>

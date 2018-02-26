@@ -10,12 +10,14 @@
 
 body {
 	margin: 0;
-	background-color:rgb(243, 240, 240);
+	background-color: rgb(243, 240, 240);
 	font-size: 18px;
 	font-family: 'Spectral SC', serif;
 	text-align: center;
 }
-body, html {
+
+body,
+html {
 	height: 100%;
 	box-sizing: border-box;
 }
@@ -37,8 +39,7 @@ div.display-container {
 	justify-self: center;
 	vertical-align: middle;
 	border-bottom: 2px solid black;
-	}
-
+}
 
 img {
 	width: 14vw;
@@ -134,10 +135,10 @@ img.landing-img {
 	padding: 1em 2em;
 }
 
-
 .back-to {
 	margin: 10px auto;
 }
+
 .button-box {
 	display: flex;
 	justify-content: space-around;
@@ -169,37 +170,41 @@ main {
 img.round-image {
 	border-radius: 50%;
 }
+
 .right-menu {
 	padding-right: 5%;
 	text-align: center;
 	display: inline-flex;
 	white-space: nowrap;
 }
+
 h1.banner {
 	background-color: rgb(243, 240, 240);
 	border-bottom: 2px solid black;
-	margin:0 auto 10px auto;
+	margin: 0 auto 10px auto;
 	font-size: 38px;
 	width: 85vw;
 	min-width: 340px;
 	max-width: 800px;
 }
+
 /* HAMBURGER STYLES --------------------------------- */
 
 button.hamburger {
 	box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
 	border: none;
 	z-index: 1000;
-	margin-right:10px;
+	margin-right: 10px;
 	margin-left: 10vw;
 }
+
 @media (max-width: 510px) {
 	button.hamburger {
 		margin-left: 3px;
-		margin-right:10px;
+		margin-right: 10px;
 	}
-
 }
+
 .hamburger {
 	z-index: 20;
 	position: relative;
@@ -213,12 +218,13 @@ button.hamburger {
 	background-color: #000000;
 	z-index: 20;
 }
+
 @media (min-width: 1076px) {
 	button.hamburger {
 		display: none;
 	}
-	
 }
+
 /* MENU OVERLAY SECTION------------------------------ */
 
 .menu-overlay {
@@ -266,12 +272,12 @@ button.hamburger {
 .menu-overlay li {
 	display: block;
 	height: calc(100%/5);
-		
 }
 
-li > a:hover {
-	color:#000000;
+li>a:hover {
+	color: #000000;
 }
+
 ul li {
 	list-style: none;
 	/* color: rgba(218, 228, 227, 0.89); */
@@ -282,14 +288,13 @@ ul li {
 /* ------LINK STYLES --------------------------------------- */
 
 .link-build {
-	border-left:2px solid rgba(0, 163, 228, 0.575);
+	border-left: 2px solid rgba(0, 163, 228, 0.575);
 	visibility: visible;
 }
 
 .link-build.closed {
 	visibility: hidden;
 }
-
 
 /* END LINK HIDE --------------------------------------- */
 
@@ -359,8 +364,6 @@ input:focus {
 	padding: 2px 16px;
 }
 
-
-
 .main-img {
 	width: 100%;
 	max-width: 280px;
@@ -379,6 +382,7 @@ input:focus {
 .header-image {
 	margin-left: 4vw;
 }
+
 @media (max-width: 1076px) {
 	.header-image {
 		margin-left: 8vw;
@@ -392,21 +396,22 @@ input:focus {
 	.landing {
 		background-position-x: 12%;
 	}
-	
 }
-@media (max-width: 586px) {
-		.landing h4 {
-			margin: 0 auto;
-		}
-		
-	}	
 
-@media (max-width: 460px){
+@media (max-width: 586px) {
+	.landing h4 {
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 460px) {
 	.header-image {
 		display: none;
 	}
 }
+
 /* SHOW PAGE STYLIONG---------------------------------- */
+
 .show-container {
 	text-align: center;
 	display: inline-block;
@@ -432,7 +437,9 @@ img.soft-image {
 	border-radius: 12px;
 	/* box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2); */
 }
+
 /* END SHOW PAGE STYLING ---------------------------*/
+
 .circle {
 	justify-self: center;
 	vertical-align: middle;
@@ -451,9 +458,11 @@ img.soft-image {
 	bottom: 0;
 	color: black;
 }
-.whiteout ul li > a {
-	color:white;
+
+.whiteout ul li>a {
+	color: white;
 }
+
 .footer .foot-logo {
 	width: 100%;
 	height: 13vh;
@@ -465,7 +474,6 @@ img.soft-image {
 .footer .foot-logo span {
 	font-size: 20px;
 	letter-spacing: 4px;
-	
 }
 
 .footer .foot-logo span:first-child {
@@ -499,26 +507,29 @@ img.soft-image {
 	font-family: 'Spectral SC', serif;
 }
 
-
 .links-text {
 	list-style: none;
 	padding-left: 0;
 	text-align: center;
 	color: white;
 }
+
 .links-text h5 {
 	font-size: 23px;
-	
-	
 }
-#foot-col-1, #foot-col-2 {
+
+#foot-col-1,
+#foot-col-2 {
 	border-right: 2px solid white;
 }
-@media (max-width: 915px){
-	#foot-col-1, #foot-col-2 {
+
+@media (max-width: 915px) {
+	#foot-col-1,
+	#foot-col-2 {
 		border-right: none;
 	}
 }
+
 .about {
 	width: 300px;
 	margin: 10px 2px 10px 2px;
@@ -536,9 +547,5 @@ img.soft-image {
 	align-items: center;
 	text-align: center;
 }
-
-
-
-
 
 /* END FOOTER&BOTTOM STYLES------------------------------ */
