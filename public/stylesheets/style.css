@@ -36,7 +36,7 @@ div.display-container {
 	max-width: 800px;
 	justify-self: center;
 	vertical-align: middle;
-	border-bottom: 2px solid rgb(0, 163, 228) ;
+	border-bottom: 2px solid black;
 	}
 
 
@@ -74,6 +74,7 @@ nav h1 {
 	font-weight: 400;
 	font-size: 48px;
 	margin-left: 20px;
+	color: rgb(0, 163, 228);
 }
 
 button {
@@ -132,17 +133,8 @@ img.landing-img {
 	border-top: 1px solid rgb(163, 223, 223);
 	padding: 1em 2em;
 }
-@media (max-width: 900px) {
-	.landing h4{
-		margin: 0 50vw 20vw 10vw;
-	}
-}
-@media (max-width: 586px) {
-	.landing h4 {
-		margin: 0 auto;
-	}
-	
-}
+
+
 .back-to {
 	margin: 10px auto;
 }
@@ -184,10 +176,13 @@ img.round-image {
 	white-space: nowrap;
 }
 h1.banner {
-	background-color: #FFFFFF;
-	border-bottom: 2px solid rgb(163, 223, 223);
+	background-color: rgb(243, 240, 240);
+	border-bottom: 2px solid black;
 	margin:0 auto 10px auto;
 	font-size: 38px;
+	width: 85vw;
+	min-width: 340px;
+	max-width: 800px;
 }
 /* HAMBURGER STYLES --------------------------------- */
 
@@ -273,9 +268,7 @@ button.hamburger {
 	height: calc(100%/4);
 		
 }
-li, li > a {
-	color: white;
-}
+
 li > a:hover {
 	color:#000000;
 }
@@ -289,6 +282,7 @@ ul li {
 /* ------LINK STYLES --------------------------------------- */
 
 .link-build {
+	border-left:2px solid rgba(0, 163, 228, 0.575);
 	visibility: visible;
 }
 
@@ -398,8 +392,17 @@ input:focus {
 	.landing {
 		background-position-x: 12%;
 	}
-	
+	.landing h4{
+		margin: 0 50vw 20vw 10vw;
+	}
 }
+@media (max-width: 586px) {
+		.landing h4 {
+			margin: 0 auto;
+		}
+		
+	}	
+
 @media (max-width: 460px){
 	.header-image {
 		display: none;
@@ -438,7 +441,7 @@ img.soft-image {
 	width: 50px;
 	height: 50px;
 	padding: 2px;
-	background-color: #000000;
+	background-color: #FFFFFF;
 	border-radius: 20%;
 	margin: 0 auto;
 }
@@ -448,8 +451,11 @@ img.soft-image {
 .footer {
 	/* height: 33vh; */
 	bottom: 0;
+	color: black;
 }
-
+.whiteout ul li > a {
+	color:black;
+}
 .footer .foot-logo {
 	width: 100%;
 	height: 13vh;
@@ -459,8 +465,9 @@ img.soft-image {
 }
 
 .footer .foot-logo span {
-	font-size: 16px;
+	font-size: 20px;
 	letter-spacing: 4px;
+	
 }
 
 .footer .foot-logo span:first-child {
@@ -494,17 +501,26 @@ img.soft-image {
 	font-family: 'Spectral SC', serif;
 }
 
-ul,
-li,
+
 .links-text {
 	list-style: none;
 	padding-left: 0;
 	text-align: center;
+	color: black;
 }
 .links-text h5 {
 	font-size: 23px;
+	
+	
 }
-
+#foot-col-1, #foot-col-2 {
+	border-right: 2px solid white;
+}
+@media (max-width: 915px){
+	#foot-col-1, #foot-col-2 {
+		border-right: none;
+	}
+}
 .about {
 	width: 300px;
 	margin: 10px 2px 10px 2px;
@@ -516,7 +532,6 @@ li,
 	margin: 0;
 }
 
-.bottom-logo,
 .footer .foot-logo {
 	display: flex;
 	justify-content: space-around;
@@ -524,30 +539,8 @@ li,
 	text-align: center;
 }
 
-.bottom-logo {
-	bottom: 10%;
-	width: 100%;
-}
 
-.bottom-logo span {
-	font-size: 16px;
-	letter-spacing: 4px;
-}
 
-.bottom-logo span:first-child {
-	width: 38%;
-	margin-right: 20px;
-	margin-left: 12px;
-	border-right: 4px solid rgba(255, 255, 255, 0.637);
-}
 
-.bottom-logo span:last-child {
-	width: 38%;
-	font-size: 20px;
-	padding-left: 9px;
-	margin-left: 20px;
-	margin-right: 12px;
-	border-left: 4px solid rgba(255, 255, 255, 0.637);
-}
 
 /* END FOOTER&BOTTOM STYLES------------------------------ */
