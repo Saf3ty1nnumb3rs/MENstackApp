@@ -59,3 +59,6 @@ https://github.com/Saf3ty1nnumb3rs/MENstackApp
 ### I found that spending more time on user stories, data objects, and wireframes set me up for success. Where previously I would do minimal planning and dive in, this go around I spent more time setting up and polishing. Very little time was required coding the project due to a much improved planning process. I truly recognize the value of user stories and thorough planning and design - it's changed the entire experience and given me a great appreciation for the ENTIRE process.
 
 ### Routing is making sense. Although the interactions on this app are simple, it has opened the door for limitless possibilites as we add on more techniques and tools to add multiple nuances and layers to object relationships. I've learned quite a bit, but I am much more aware of how much there is to learn.
+
+##### Hamburger button (hamburgers.css) is the work of Jon Suh and used with permission. The MIT License (MIT) Copyright (c) 2016 Jonathan Suh <hello@jonsuh.com> (jonsuh.com) 
+##### All additional styling and associated javascript is the work of the author (Josh Sample) 
