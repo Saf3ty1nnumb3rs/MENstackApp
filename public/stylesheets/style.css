@@ -454,7 +454,7 @@ img.soft-image {
 	color: black;
 }
 .whiteout ul li > a {
-	color:black;
+	color:white;
 }
 .footer .foot-logo {
 	width: 100%;
@@ -506,7 +506,7 @@ img.soft-image {
 	list-style: none;
 	padding-left: 0;
 	text-align: center;
-	color: black;
+	color: white;
 }
 .links-text h5 {
 	font-size: 23px;
