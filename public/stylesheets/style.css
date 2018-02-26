@@ -10,7 +10,7 @@
 
 body {
 	margin: 0;
-	background-color:rgb(243, 240, 240)
+	background-color:rgb(243, 240, 240);
 	font-size: 18px;
 	font-family: 'Spectral SC', serif;
 	text-align: center;
@@ -28,7 +28,7 @@ div.display-container {
 	text-align: center;
 	display: inline-block;
 	width: 85vw;
-	background: white;
+	background: rgb(243, 240, 240);
 	margin: 10px auto 30px auto;
 	padding: 1em;
 	position: relative;
@@ -132,7 +132,12 @@ img.landing-img {
 	border-top: 1px solid rgb(163, 223, 223);
 	padding: 1em 2em;
 }
-@media (max-width: 716px) {
+@media (max-width: 900px) {
+	.landing h4{
+		margin: 0 50vw 20vw 10vw;
+	}
+}
+@media (max-width: 586px) {
 	.landing h4 {
 		margin: 0 auto;
 	}
@@ -147,6 +152,7 @@ img.landing-img {
 }
 
 a {
+	cursor: pointer;
 	color: #000000;
 	text-decoration: none;
 }
@@ -171,15 +177,6 @@ main {
 img.round-image {
 	border-radius: 50%;
 }
-@media (max-width: 1076px) {
-	span.go-away {
-		display: none;
-	}
-	.landing {
-		background-position-x: 12%;
-	}
-}
-
 .right-menu {
 	padding-right: 5%;
 	text-align: center;
@@ -276,8 +273,11 @@ button.hamburger {
 	height: calc(100%/4);
 		
 }
-li > a {
+li, li > a {
 	color: white;
+}
+li > a:hover {
+	color:#000000;
 }
 ul li {
 	list-style: none;
@@ -392,6 +392,13 @@ input:focus {
 	.link-build {
 		display: none;
 	}
+	span.go-away {
+		display: none;
+	}
+	.landing {
+		background-position-x: 12%;
+	}
+	
 }
 @media (max-width: 460px){
 	.header-image {
@@ -430,6 +437,7 @@ img.soft-image {
 	vertical-align: middle;
 	width: 50px;
 	height: 50px;
+	padding: 2px;
 	background-color: #000000;
 	border-radius: 20%;
 	margin: 0 auto;
