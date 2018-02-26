@@ -85,6 +85,16 @@ const booze = new Whisky({
     yearsAged: 1,
     originCountry: 'Your Moms Place',
 })
+const crown = new Whisky({
+    name: 'Crown Royal',
+    img: 'http://cdn8.bigcommerce.com/s-e6b77/products/12519/images/12899/crown-royal-blended-canadian-whisky__79826.1496358601.220.220.jpg?c=2',
+    distillery:'Crown Royal Distillery, Gimli',
+    yearMade: 1939,
+    style: 'Blended Canadian',
+    yearsAged: 1,
+    originCountry: 'Canada',
+
+})
 
 
 //Countries-----------------------------------------------
@@ -107,14 +117,14 @@ const usa = new Country({
     img: 'https://images.bigcartel.com/product_images/186663745/AMERICANFLAG1STUDIO.png?auto=format&fit=max&h=1000&w=1000',
     primaryWhiskyStyle: 'Blended Whiskey',
     topSellingWhisky: "Jack Daniel's",
-    whiskyProduced: [bulleit]
+    whiskyProduced: [bulleit, booze]
 })
 const canada = new Country({
     country: 'Canada',
     img: 'https://t3.ftcdn.net/jpg/00/54/27/10/240_F_54271016_zXrqtDpHheoGVnX11ohnn8KAJ0JtUyAK.jpg',
     primaryWhiskyStyle: 'Whats whiskey aboot',
     topSellingWhisky: "Crown Royal",
-    whiskyProduced: [bulleit]
+    whiskyProduced: [crown]
 })
 const ireland = new Country({
     country: 'Ireland',
@@ -142,7 +152,7 @@ const bender = new User({
     name: 'Bender',
     img: 'https://memegenerator.net/img/instances/26693568/were-going-to-start-our-own-homebrew-club-with-whiskey-and-hookers.jpg',
     country: 'Earth',
-    favoriteWhisky: [hakushu],
+    favoriteWhisky: [hakushu, crown, ardbeg, jameson],
 })
 const domokun = new User({
     name: 'Domo Kun',
