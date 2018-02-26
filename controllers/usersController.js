@@ -1,5 +1,7 @@
 const express = require('express')
-const router = express.Router({ mergeParams: true })
+const router = express.Router({
+    mergeParams: true
+})
 const User = require('../models/user')
 
 
@@ -19,7 +21,7 @@ router.get('/', (req, res) => {
 
 //USER NEW-------------------------GET//
 router.get('/new', (req, res) => {
-  res.render('users/new')
+    res.render('users/new')
 })
 
 
@@ -35,16 +37,16 @@ router.get('/:id', (req, res) => {
 })
 //USER------------------------------CREATE/POST//
 router.post('/', (req, res) => {
-  const newUser = new User({
-    name: req.body.name,
-    img: req.body.img,
-    country: req.body.country,
-    favoriteWhisky: req.body.favoriteWhisky
-  })
+    const newUser = new User({
+        name: req.body.name,
+        img: req.body.img,
+        country: req.body.country,
+        favoriteWhisky: req.body.favoriteWhisky
+    })
 
-  newUser.save().then((savedUser) => {
-    res.redirect('/users')
-  })
+    newUser.save().then((savedUser) => {
+        res.redirect('/users')
+    })
 })
 
 
@@ -56,7 +58,7 @@ router.get('/:id/edit', (req, res) => {
 
         res.render('users/edit', {
             id: req.params.id,
-            user:user
+            user: user
         })
     })
 })
@@ -64,12 +66,14 @@ router.get('/:id/edit', (req, res) => {
 //USER PATCH--------------------------PUT/UPDATE//
 router.patch('/:id', (req, res) => {
     User.findByIdAndUpdate(req.params.id, {
-      name: req.body.name,
-      img: req.body.img,
-      country: req.body.country,
-    }, {new: true}).then((updatedUser) => {
+        name: req.body.name,
+        img: req.body.img,
+        country: req.body.country,
+    }, {
+        new: true
+    }).then((updatedUser) => {
         res.redirect(`/users/${updatedUser._id}`)
-    }).catch((err)=>{
+    }).catch((err) => {
         console.log(err)
     })
 })
@@ -77,9 +81,9 @@ router.patch('/:id', (req, res) => {
 //USER DELETE--------------------------DESTROY//
 
 router.delete('/:id', (req, res) => {
-  User.findByIdAndRemove(req.params.id).then(() => {
-    res.redirect('/users')
-  })
+    User.findByIdAndRemove(req.params.id).then(() => {
+        res.redirect('/users')
+    })
 })
 
 

@@ -10,7 +10,8 @@
 
 body {
 	margin: 0;
-	background-color: #a7a7a7e8;
+	background-color:rgb(14, 37, 110);
+	/* background-color: #a7a7a7e8; */
 	font-size: 18px;
 	font-family: 'Spectral SC', serif;
 	text-align: center;
@@ -30,13 +31,17 @@ div.display-container {
 	width: 85vw;
 	background: white;
 	border: 1px solid #B9D6C2;
-	margin: 10px auto;
+	margin: 10px auto 30px auto;
 	border-radius: 4px;
-	padding: 2em;
+	padding: 1em;
 	position: relative;
-	min-width: 340px;
+	min-width: 240px;
 	max-width: 800px;
-}
+	justify-self: center;
+	vertical-align: middle;
+	box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
+	}
+
 
 img {
 	width: 14vw;
@@ -48,6 +53,7 @@ nav {
 	top: 0;
 	width: 100vw;
 	display: flex;
+	justify-content: space-between;
 	align-items: center;
 	background: white;
 	z-index: 1;
@@ -70,7 +76,7 @@ nav h1 {
 	font-style: normal;
 	font-weight: 400;
 	font-size: 4vw;
-	margin: 0 40px;
+	margin: 0 40px 0 20px;
 }
 
 button {
@@ -171,11 +177,19 @@ img.round-image {
 }
 
 .right-menu {
+	margin-left: 3%;
+	padding-right: 5%;
 	align-items: center;
 	display: inline-flex;
 	white-space: nowrap;
 }
-
+h1.banner {
+	width: 40vw;
+	background-color: #FFFFFF;
+	box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
+	margin:0 auto 10px auto;
+	font-size: 3vw;
+}
 /* HAMBURGER STYLES --------------------------------- */
 
 button.hamburger {
@@ -223,10 +237,12 @@ button.hamburger {
 .menu-overlay nav {
 	text-align: center;
 	position: relative;
-	font-family: 'Abril Fatface', cursive;
+	font-family: 'Bungee Shade', cursive;
 	top: 40%;
-	height: 55%;
-	font-size: 8vw;
+	height: 30vw;
+	width: 90vw;
+	margin: 0 auto;
+	font-size: 6vw;
 	text-shadow: 1px 1px #6790a0;
 	transform: translateY(-36%);
 }
@@ -262,7 +278,6 @@ ul li {
 
 .link-build {
 	visibility: visible;
-	border-right: 4px solid rgba(255, 255, 255, 0.637);
 }
 
 .link-build.closed {
@@ -343,11 +358,7 @@ input:focus {
 	padding: 2px 16px;
 }
 
-.display-container {
-	justify-self: center;
-	vertical-align: middle;
-	box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
-}
+
 
 .main-img {
 	width: 100%;

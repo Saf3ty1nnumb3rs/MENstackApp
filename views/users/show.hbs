@@ -8,6 +8,7 @@
 
             <h3>{{user.country}}</h3>
         </div>
+        <br>
         <div>
             <button>
                 <a href="/users/{{user.id}}/edit">Edit Me</a>
@@ -17,8 +18,9 @@
             </button>
 
         </div>
+        <br>
         <h4>{{user.name}}'s Favorite Whiskey:</h4>
-
+        <br>
 
         <ul>
             {{#each user.favoriteWhisky}}
@@ -32,7 +34,7 @@
             </div>
             {{/each}}
         </ul>
-
+        <br>
         <a href="./{{user.id}}/favWhisky/new">Add Whiskey</a>
         <form method="POST" action="/users/{{user.id}}?_method=DELETE">
             <button class="delete" type="submit">Delete This Account</button>
