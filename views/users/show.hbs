@@ -15,9 +15,11 @@
                     Edit Me
                 </button>
             </a>
-            <button>
-                <a href="/users/">Back to Users</a>
-            </button>
+            <a href="/users/">
+                <button>
+                    Back to Users
+                </button>
+            </a>
 
         </div>
         <br>
@@ -27,14 +29,14 @@
         <ul>
             {{#each user.favoriteWhisky}}
             <a href="/users/{{../user.id}}/favWhisky/{{this._id}}">
-            <div class="card">
+                <div class="card">
 
-                <img src="{{img}}" alt="{{name}}">
+                    <img src="{{img}}" alt="{{name}}">
 
-                <li>{{name}}</li>
+                    <li>{{name}}</li>
 
 
-            </div>
+                </div>
             </a>
             {{/each}}
         </ul>
