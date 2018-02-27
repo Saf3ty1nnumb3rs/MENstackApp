@@ -48,7 +48,7 @@ router.post('/', (req, res) => {
         favoriteWhisky: req.body.favoriteWhisky
     })
     if (!newUser.img) {
-        newUser.img = 'http://www.placecage.com/c/200/300'
+        newUser.img = 'http://www.placecage.com/c/300/300'
       }
     
       newUser.save().then((savedUser) => {
