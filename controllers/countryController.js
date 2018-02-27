@@ -11,7 +11,8 @@ router.get('/', (req, res) => {
 
     Country.find().then((countries) => {
         res.render('country/index', {
-            countries: countries
+            countries: countries,
+            title: 'WISHkey - Countries & Regions'
         })
     })
 
@@ -24,7 +25,8 @@ router.get('/:id', (req, res) => {
     Country.findById(req.params.id).then((country) => {
         res.render('country/show', {
             countryId: req.params.countryId,
-            country: country
+            country: country,
+            title: 'WISHkey - Country Profile'
         })
     })
 
@@ -37,7 +39,8 @@ router.get('/:id/edit', (req, res) => {
 
         res.render('country/edit', {
             id: req.params.id,
-            country:country
+            country:country,
+            title: 'WISHkey - Country Edit'
         })
     })
 })
