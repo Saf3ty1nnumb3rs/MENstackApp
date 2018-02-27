@@ -15,7 +15,8 @@ router.get('/new', (req, res) => {
 
     // We only need to pass the country ID to this new view
     res.render('whisky/new', {
-        countryId: req.params.countryId
+        countryId: req.params.countryId,
+        title: 'WISHkey - New Whisky'
     })
 })
 
@@ -60,7 +61,8 @@ router.get('/:id', (req, res) => {
 
         res.render('whisky/show', {
             countryId: req.params.countryId,
-            whisky: whisky
+            whisky: whisky,
+            title: 'WISHkey - Whiskey Profile'
         })
     })
 
@@ -75,7 +77,8 @@ router.get('/:id/edit', (req, res) => {
         const whisky = country.whiskyProduced.id(req.params.id)
         res.render('whisky/edit', {
             countryId: req.params.countryId,
-            whisky: whisky
+            whisky: whisky,
+            title: 'WISHkey - Whisky Edit'
         })
     })
 })

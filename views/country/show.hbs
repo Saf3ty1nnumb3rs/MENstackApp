@@ -11,9 +11,9 @@
 
         <h4>Top Selling Whiskey: {{country.topSellingWhisky}}</h4>
         <div>
-            <a href="/country">Back to Countries</a>
-            <br>
-            <a href="/country/{{country.id}}/edit">Edit Country</a>
+            <a href="/country"><button>Back to Countries</button></a>
+            
+            <a href="/country/{{country.id}}/edit"><button>Edit {{country.country}}</button></a>
         </div>
         <ul>
             {{#each country.whiskyProduced}}

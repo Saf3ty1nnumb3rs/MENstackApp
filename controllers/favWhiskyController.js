@@ -12,7 +12,8 @@ router.get('/new', (req, res) => {
 
     // We only need to pass the User ID to this new view
     res.render('favWhisky/new', {
-        UserId: req.params.UserId
+        UserId: req.params.UserId,
+        title: 'WISHkey - New Whisky'
     })
 })
 //AOK!!!
@@ -57,7 +58,8 @@ router.get('/:id', (req, res) => {
 
         res.render('favWhisky/show', {
             UserId: req.params.userId,
-            whisky: whisky
+            whisky: whisky,
+            title: 'WISHkey - Whisky Profile'
         })
     })
 
@@ -73,7 +75,8 @@ router.get('/:id/edit', (req, res) => {
         const whisky = user.favoriteWhisky.id(req.params.id)
         res.render('favWhisky/edit', {
             userId: req.params.UserId,
-            whisky: whisky
+            whisky: whisky,
+            title:'WISHkey - Whisky Edit'
         })
     })
 })

@@ -22,24 +22,7 @@ html {
 	box-sizing: border-box;
 }
 
-div {
-	display: block;
-}
 
-div.display-container {
-	text-align: center;
-	display: inline-block;
-	width: 85vw;
-	background: rgb(243, 240, 240);
-	margin: 10px auto 30px auto;
-	padding: 1em;
-	position: relative;
-	min-width: 240px;
-	max-width: 800px;
-	justify-self: center;
-	vertical-align: middle;
-	border-bottom: 2px solid black;
-}
 
 img {
 	width: 14vw;
@@ -206,7 +189,7 @@ button.hamburger {
 }
 
 .hamburger {
-	z-index: 20;
+	z-index: 1000;
 	position: relative;
 	padding: 0 8px;
 }
@@ -216,7 +199,7 @@ button.hamburger {
 .hamburger-inner:before {
 	text-shadow: 1px 1px 1px #313030;
 	background-color: #000000;
-	z-index: 20;
+	z-index: 1000;
 }
 
 @media (min-width: 1076px) {
@@ -280,7 +263,6 @@ li>a:hover {
 
 ul li {
 	list-style: none;
-	/* color: rgba(218, 228, 227, 0.89); */
 }
 
 /* END MENU OVERLAY SECTION -------------------------------- */
@@ -411,17 +393,23 @@ input:focus {
 }
 
 /* SHOW PAGE STYLIONG---------------------------------- */
-
-.show-container {
+.display-container {
+	background: rgb(243, 240, 240);
+	min-width: 240px;
+	border-bottom: 2px solid black;
+}
+.display-container , .show-container {
 	text-align: center;
 	display: inline-block;
 	width: 85vw;
-	background: white;
-	margin: 10px auto;
+	margin: 10px auto 30px auto;
 	padding: 1em;
 	position: relative;
-	min-width: 260px;
 	max-width: 800px;
+}
+.show-container {
+	background: white;
+	min-width: 260px;
 }
 
 .show-container img {

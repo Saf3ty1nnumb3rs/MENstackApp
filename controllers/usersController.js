@@ -13,7 +13,8 @@ router.get('/', (req, res) => {
 
     User.find().then((users) => {
         res.render('users/index', {
-            users: users
+            users: users,
+            title: 'WISHkey - Users'
         })
     })
 
@@ -21,7 +22,9 @@ router.get('/', (req, res) => {
 
 //USER NEW-------------------------GET//
 router.get('/new', (req, res) => {
-    res.render('users/new')
+    res.render('users/new', {
+        title: 'WISHkey - New User'
+    })
 })
 
 
@@ -30,7 +33,8 @@ router.get('/:id', (req, res) => {
 
     User.findById(req.params.id).then((user) => {
         res.render('users/show', {
-            user: user
+            user: user,
+            title: 'WISHkey - Profile'
         })
     })
 
@@ -43,8 +47,11 @@ router.post('/', (req, res) => {
         country: req.body.country,
         favoriteWhisky: req.body.favoriteWhisky
     })
-
-    newUser.save().then((savedUser) => {
+    if (!newUser.img) {
+        newUser.img = 'http://www.placecage.com/c/200/300'
+      }
+    
+      newUser.save().then((savedUser) => {
         res.redirect('/users')
     })
 })
@@ -58,7 +65,8 @@ router.get('/:id/edit', (req, res) => {
 
         res.render('users/edit', {
             id: req.params.id,
-            user: user
+            user: user,
+            title: 'WISHkey - Edit User'
         })
     })
 })
