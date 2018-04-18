@@ -40,6 +40,7 @@ router.get('/:id', (req, res) => {
 
 })
 //USER------------------------------CREATE/POST//
+
 router.post('/', (req, res) => {
     const newUser = new User({
         name: req.body.name,
